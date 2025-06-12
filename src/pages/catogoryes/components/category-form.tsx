@@ -79,6 +79,7 @@ export const CategoryForm = ({ closeModal, defaultValue }: Props) => {
     value: item.id,
     label: <span>{item.name}</span>,
   }));
+
   return (
     <Form
       form={form}
