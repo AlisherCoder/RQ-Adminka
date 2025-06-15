@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { Button, Layout, Menu, theme } from "antd";
-import { Link, Navigate, Outlet } from "react-router-dom";
-import { layoutData } from "./layout-data";
-import { loadState } from "../config/storage";
+import React, { useState } from 'react';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { Button, Layout, Menu, theme } from 'antd';
+import { Link, Navigate, Outlet } from 'react-router-dom';
+import { layoutData } from './layout-data';
+import { loadState } from '../config/storage';
 const { Header, Sider, Content } = Layout;
 
 const links = layoutData.map((item) => ({
@@ -18,20 +18,19 @@ export const MainLayout: React.FC = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
-  
-  const token = loadState("token");
+  const token = loadState('token');
   if (!token) {
-    return <Navigate to={"/"} replace />;
+    return <Navigate to={'/'} replace />;
   }
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: '100vh' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["/app"]}
+          defaultSelectedKeys={['/app']}
           items={links}
         />
       </Sider>
@@ -42,7 +41,7 @@ export const MainLayout: React.FC = () => {
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: "16px",
+              fontSize: '16px',
               width: 64,
               height: 64,
             }}
@@ -50,7 +49,7 @@ export const MainLayout: React.FC = () => {
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
+            margin: '24px 16px',
             padding: 24,
             minHeight: 280,
             background: colorBgContainer,

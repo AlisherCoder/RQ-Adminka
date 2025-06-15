@@ -1,34 +1,32 @@
-import { Home } from "../pages/home/home";
-import { Categoryes } from "../pages/catogoryes/categoryes";
-import { Products } from "../pages/products/products";
-import { Order } from "../pages/order/order";
-import { Colors } from "../pages/colors/colors";
-import { Users } from "../pages/users/users";
+import { Home } from '../pages/home/home';
+import { Categoryes } from '../pages/catogoryes/categoryes';
+import { Products } from '../pages/products/products';
+import { Order } from '../pages/order/order';
+import { Colors } from '../pages/colors/colors';
+import { Users } from '../pages/users/users';
 
 export default [
   {
     element: Home,
   },
-  //CATEGORY
   {
-    path: "categoryes",
+    path: 'categoryes',
     element: Categoryes,
   },
-  //CATEGORY
   {
-    path: "products",
+    path: 'products',
     element: Products,
   },
   {
-    path: "orders",
+    path: 'orders',
     element: Order,
   },
   {
-    path: "colors",
+    path: 'colors',
     element: Colors,
   },
   {
-    path: "users",
+    path: 'users',
     element: Users,
   },
 ];
